@@ -1,0 +1,132 @@
+#login {
+    background: linear-gradient(120deg, #FF8400 44.9%, #ffffff 45%) no-repeat fixed;
+}
+
+.text-login {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.coins-img {
+    position: relative;
+}
+
+.coins {
+    position: absolute;
+    bottom: 0px;
+}
+
+.button-login {
+    width: 50% !important;
+    border-radius: 10px !important;
+    background-color: #4c0070 !important;
+    color: #fff !important;
+    margin: 0 25% !important;
+}
+
+.button-login:hover,
+.button-default:hover {
+    background-color: #4c79d3 !important;
+    color: #fff !important;
+}
+
+.button-default {
+    border-radius: 10px !important;
+    background-color: #4c0070 !important;
+    color: #ffffff !important;
+
+}
+
+.button-cancel {
+    border-radius: 10px !important;
+
+}
+
+.button-float {
+    border-radius: 100% !important;
+    border: 2px solid #4c0070 !important;
+    height: 60px !important;
+    width: 60px !important;
+    position: fixed !important;
+    bottom: 1rem !important;
+    right: 2rem !important;
+    font-size: 35px !important;
+    background-color: #4c0070 !important;
+    color: #ffffff !important;
+    padding: 0 !important;
+}
+
+.button-float:hover {
+    border: 2px solid #4c79d3 !important;
+    background-color: #ffffff !important;
+    color: #4c79d3 !important;
+}
+
+.link-default {
+    color: #4c0070;
+    cursor: pointer;
+}
+
+.link-default:hover {
+    color: #4c79d3;
+    cursor: pointer;
+}
+
+/*******LOGIN*****/
+
+#app {
+    background: linear-gradient(120deg, #ffffff 44.9%, #FF8400 45%) no-repeat fixed;
+}
+
+header {
+    border-bottom: 1px solid #bebcbc;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+.color-primary {
+    color: #4c0070;
+}
+
+.color-secondary {
+    color: #4c79d3;
+}
+
+.icon-detail {
+    font-size: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.info {
+    background-color: #ffffff;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px 0px 0px 0px;
+
+}
+
+.logout {
+    min-width: 5rem !important;
+
+}
+
+.menu {
+    margin-right: 20px;
+}
+
+
+/***********transactions*********/
+
+.borda {
+    border-bottom: 2px solid #4c0070 !important;
+}
+
+#cash-in-list h3 {
+    color: green;
+}
+
+#cash-out-list h3 {
+    color: rgb(173, 3, 3);
+}
