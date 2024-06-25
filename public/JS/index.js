@@ -6,7 +6,7 @@ checkLogged();
 
 
 
-//LOGAR NO SISTEMA
+//LOGIN
 document.getElementById("login-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -40,7 +40,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
 
 
 
-//CRIAR CONTA 
+//CREATE ACCOUNT
 document.getElementById("create-form").addEventListener("submit", function (e) {
     e.preventDefault();
     const email = document.getElementById("email-create-input").value;
@@ -70,6 +70,8 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 });
 
 
+
+//UTILS
 
 function checkLogged() {
     if (session) {

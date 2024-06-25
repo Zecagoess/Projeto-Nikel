@@ -102,9 +102,26 @@ header {
 
 }
 
+.logout {
+    min-width: 5rem !important;
 
-/***********transections*********/
+}
+
+.menu {
+    margin-right: 20px;
+}
+
+
+/***********transactions*********/
 
 .borda {
     border-bottom: 2px solid #4c0070 !important;
+}
+
+#cash-in-list h3 {
+    color: green;
+}
+
+#cash-out-list h3 {
+    color: rgb(173, 3, 3);
 }
