@@ -45,6 +45,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     e.preventDefault();
     const email = document.getElementById("email-create-input").value;
     const password = document.getElementById("password-create-input").value;
+    const confirmPassword = document.getElementById("password-confirm-input").value;
 
     if (email.length < 5) {
         alert("E-mail de formato inválido");
@@ -53,6 +54,11 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 
     if (password.length < 6) {
         alert("Senha dever ter no mínimo 6 dígitos");
+        return;
+    }
+
+    if (confirmPassword !== password) {
+        alert("Senhas diferentes");
         return;
     }
 

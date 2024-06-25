@@ -4,6 +4,7 @@ const session = localStorage.getItem("session");
 let data = {
     transactions: []
 };
+let saldo = 0;
 
 document.getElementById("buttom-logout").addEventListener("click", logout);
 
@@ -24,9 +25,40 @@ document.getElementById("transaction-form").addEventListener("submit", function 
     const date = document.getElementById("date-input").value;
     const transactionType = document.querySelector('input[name="type-input"]:checked').value;
 
-    data.transactions.unshift({
-        value: value, type: transactionType, description: description, date: date
-    });
+
+
+    const isCashOut = transactionType === "2";
+
+
+    let newBalance = saldo;
+
+    if (isCashOut) {
+        newBalance -= value;
+    } else {
+        newBalance += value;
+    }
+
+
+    if (newBalance < 0) {
+
+        if (confirm("Esta transação deixará seu saldo negativo. Deseja continuar?")) {
+            saveTransaction();
+        } else {
+            return;
+        }
+    } else {
+        saveTransaction();
+    }
+
+
+    function saveTransaction() {
+
+        data.transactions.unshift({
+            value: value, type: transactionType, description: description, date: date
+        });
+    }
+
+
 
     saveData(data);
     e.target.reset();
@@ -91,4 +123,19 @@ function getTransactions() {
     }
 
     document.getElementById("transactions-list").innerHTML = transactionsHtml;
+}
+
+function getTotal() {
+    const transaction = data.transactions;
+    let total = 0;
+
+    transaction.forEach((item) => {
+        if (item.type === "1") {
+            total += item.value;
+        } else {
+            total -= item.value;
+        }
+    });
+
+    return total;
 }

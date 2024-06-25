@@ -1,5 +1,5 @@
 #login {
-    background: linear-gradient(120deg, #4c79d3 44.9%, #ffffff 45%) no-repeat fixed;
+    background: linear-gradient(120deg, #FF8400 44.9%, #ffffff 45%) no-repeat fixed;
 }
 
 .text-login {
@@ -77,7 +77,7 @@
 /*******LOGIN*****/
 
 #app {
-    background: linear-gradient(120deg, #ffffff 44.9%, #4c79d3 45%) no-repeat fixed;
+    background: linear-gradient(120deg, #ffffff 44.9%, #FF8400 45%) no-repeat fixed;
 }
 
 header {
