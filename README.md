@@ -32,7 +32,7 @@ Nikel é uma aplicação web desenvolvida em HTML, CSS, JavaScript e Bootstrap, 
 
 Copiar código
 ```bat
-git clone https://github.com/seu-usuario/nikel.git
+git clone git@github.com:Zecagoess/Projeto-Nikel.git
 ```
 
 <p>Abra o arquivo index.html no seu navegador web.</p>
