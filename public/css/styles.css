@@ -34,6 +34,31 @@
 
 }
 
+.button-cancel {
+    border-radius: 10px !important;
+
+}
+
+.button-float {
+    border-radius: 100% !important;
+    border: 2px solid #4c0070 !important;
+    height: 60px !important;
+    width: 60px !important;
+    position: fixed !important;
+    bottom: 1rem !important;
+    right: 2rem !important;
+    font-size: 35px !important;
+    background-color: #4c0070 !important;
+    color: #ffffff !important;
+    padding: 0 !important;
+}
+
+.button-float:hover {
+    border: 2px solid #4c79d3 !important;
+    background-color: #ffffff !important;
+    color: #4c79d3 !important;
+}
+
 .link-default {
     color: #4c0070;
     cursor: pointer;
