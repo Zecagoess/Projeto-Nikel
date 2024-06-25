@@ -8,9 +8,14 @@
     font-weight: 500;
 }
 
+
+.coins-img {
+    position: relative;
+}
+
 .coins {
     position: absolute;
-    bottom: 150px;
+    bottom: 0px;
 }
 
 .button-login {
