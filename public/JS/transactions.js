@@ -24,19 +24,19 @@ document.getElementById("transaction-form").addEventListener("submit", function 
     const description = document.getElementById("description-input").value;
     const date = document.getElementById("date-input").value;
     const transactionType = document.querySelector('input[name="type-input"]:checked').value;
-
+    const currentBalance = getTotal();
+    let newBalance = currentBalance;
 
 
     const isCashOut = transactionType === "2";
 
-
-    let newBalance = saldo;
 
     if (isCashOut) {
         newBalance -= value;
     } else {
         newBalance += value;
     }
+
 
 
     if (newBalance < 0) {

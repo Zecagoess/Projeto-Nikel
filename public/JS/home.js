@@ -4,7 +4,7 @@ const session = localStorage.getItem("session");
 let data = {
     transactions: []
 };
-let saldo = 0;
+
 
 
 
@@ -31,11 +31,11 @@ document.getElementById("transaction-form").addEventListener("submit", function 
     const description = document.getElementById("description-input").value;
     const date = document.getElementById("date-input").value;
     const transactionType = document.querySelector('input[name="type-input"]:checked').value;
+    const currentBalance = getTotal();
+    let newBalance = currentBalance;
 
     const isCashOut = transactionType === "2";
 
-
-    let newBalance = saldo;
 
     if (isCashOut) {
         newBalance -= value;
@@ -53,22 +53,20 @@ document.getElementById("transaction-form").addEventListener("submit", function 
         }
     } else {
         saveTransaction();
-    }
 
+    }
 
     function saveTransaction() {
 
         data.transactions.unshift({
             value: value, type: transactionType, description: description, date: date
         });
-    }
 
+    }
 
     saveData(data);
     e.target.reset();
     myModal.hide();
-
-
 
     getCashIn();
     getCashOut();
@@ -77,14 +75,7 @@ document.getElementById("transaction-form").addEventListener("submit", function 
 
     alert("Lançamento adicionado com sucesso.");
 
-
-
-
 });
-
-
-
-
 
 
 //UTILS
